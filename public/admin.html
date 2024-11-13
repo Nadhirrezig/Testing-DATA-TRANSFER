@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Interface</title>
+  <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // Listen for notifications from the server
+        socket.on('notifyAdmin', (message) => {
+            alert(message); // Display the notification to the admin
+        });
+
+        // Simulate a purchase event
+        function makePurchase() {
+            socket.emit('purchase');
+        }
+    </script>
+</head>
+<body>
+  <h1>Welcome, Admin!</h1>
+  <p>Waiting for guest activity...</p>
+</body>
+</html>
