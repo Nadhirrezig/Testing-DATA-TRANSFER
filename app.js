@@ -67,6 +67,7 @@ app.get('/guest', (req, res) => {
 });
 
 ////////////////////////////////////////////////////////////////////Socket/////////////////////////////////////////////////////////////////////
+// using socket package to send and recience real time conversation in this exemple im using only a promt msg where it shows if theres a msg hhhhhh
 io.on('connection', (socket) => {
   console.log('A user connected');
 
