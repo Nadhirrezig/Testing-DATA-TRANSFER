@@ -6,13 +6,9 @@
   <script src="/socket.io/socket.io.js"></script>
     <script>
         const socket = io();
-
-        // Listen for notifications from the server
         socket.on('notifyAdmin', (message) => {
-            alert(message); // Display the notification to the admin
+            alert(message);
         });
-
-        // Simulate a purchase event
         function makePurchase() {
             socket.emit('purchase');
         }
